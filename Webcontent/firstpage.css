@@ -32,14 +32,13 @@ img {
 }
 
 #createBtn{
-	background-color: #7dee9f;
-	color: #171717;
+	background-color: #4dd6cb;
+	color: #000000;
 	border: none;
 	padding: 5px 43px;
 	font: bold;
 	font-family: Arial;
 	border-radius: 10px;
     font-weight: bold;
-    margin-left: 60px;
 }
 
