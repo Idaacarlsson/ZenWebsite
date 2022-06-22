@@ -7,31 +7,33 @@
 <title>Annotation Tool</title>
 </head>
 
-<aside>
-    <table id="asideTable">
-        <tbody>			
-            <tr><td><span id="city"></span></td>
-            <td><span id="ipNbr"></span></td>				
-            </tr> 
-            <tr><td></td></tr>
-            <tr><td></td></tr>
-            <tr><td></td></tr>
-            <tr><td></td></tr>
-            <tr><td></td></tr>					
-            <tr><td><span id="degree"></span></td>
-            <td><span id="weather"></span></td>					
-            <td><span></span></td>
-            <td><span></span></td>
-                <tr>
-            <td colspan="4"><span id="sunrise"></span></td>
-        </tr>
-        <tr>
-            <td colspan="4"><span id="sunset"></span></td>
-        </tr>
-    </tbody></table>
-</aside>
-
 <body>
+    
+    <aside>
+        <table id="asideTable">
+            <tbody>			
+                <tr><td><span id="city"></span></td>
+                <td><span id="ipNbr"></span></td>				
+                </tr> 
+                <tr><td></td></tr>
+                <tr><td></td></tr>
+                <tr><td></td></tr>
+                <tr><td></td></tr>
+                <tr><td></td></tr>					
+                <tr><td><span id="degree"></span></td>
+                <td><span id="weather"></span></td>					
+                <td><span></span></td>
+                <td><span></span></td>
+                    <tr>
+                <td colspan="4"><span id="sunrise"></span></td>
+            </tr>
+            <tr>
+                <td colspan="4"><span id="sunset"></span></td>
+            </tr>
+        </tbody></table>
+    </aside>	
+
+    <article class="dot"></article>
 
 <div class="parent">
 
@@ -43,8 +45,7 @@
 		</section>		
 	</section>
 
-    <script> 
-    
+    <script>
         $(document).ready(function(){
             $.ajax({
              method: "GET",
@@ -59,10 +60,10 @@
             console.log("Ajax-find weather: "+status);
         }
         
-            // weather api
+        });
         
-        
-          function ParseJsonFile(result) {
+        // weather api
+        function ParseJsonFile(result) {
           var lat = result.latitude;
           var long = result.longitude;
           var city = result.city;
@@ -76,7 +77,6 @@
                   error: ajaxWeatherReturn_Error,
                   success: ajaxWeatherReturn_Success
         })
-    
         function ajaxWeatherReturn_Success(result, status, xhr) {
           var sunrise = result.sys.sunrise;
           var sunset = result.sys.sunset;
@@ -93,11 +93,8 @@
             alert("Error i OpenWeaterMap Ajax");
             }
         }
-
-    })
-    
-    </script>
-
-</body>
-</html>
+         
+        </script>
+    </body>
+    </html>
 
