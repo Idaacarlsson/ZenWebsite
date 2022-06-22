@@ -10,7 +10,7 @@
 }
 
  body {
-	background-color: #383939;
+	background-color: #2e2424;
 }
 
 #body {
@@ -25,10 +25,22 @@ img {
 
 }
 
-.h1 {
-    background-color: aqua;
+#city, #ipNbr {
+	font-style: bold;
+	
 }
 
+#asideTable{
+	float: right;
+	margin-top: 100px;
+	color: #bcbcc0;
+
+}
+
+#asideTable{
+	font-style: bold;
+    font-family: Helvetica;
+}
 
 .parent {
     display: flex;
