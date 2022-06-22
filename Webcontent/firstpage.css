@@ -25,6 +25,11 @@ img {
 
 }
 
+.h1 {
+    background-color: aqua;
+}
+
+
 .parent {
     display: flex;
     flex-direction: row;
@@ -35,10 +40,10 @@ img {
 	background-color: #4dd6cb;
 	color: #000000;
 	border: none;
-	padding: 5px 43px;
+	padding: 10px 50px;
 	font: bold;
-	font-family: Arial;
-	border-radius: 10px;
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+	border-radius: 3px;
     font-weight: bold;
 }
 
