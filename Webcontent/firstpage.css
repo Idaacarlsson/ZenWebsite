@@ -32,7 +32,7 @@ img {
 }
 
 #createBtn{
-	background-color: #71F69A;
+	background-color: #7dee9f;
 	color: #171717;
 	border: none;
 	padding: 5px 43px;
@@ -43,14 +43,3 @@ img {
     margin-left: 60px;
 }
 
-.logInBox{
-	padding: 0px 35px 40px 0px;
-	float: left;
-	align-items: center;
-	background-color: #383939;
-	border-radius: 20px;
-	margin-left: 550px;
-	word-wrap: break-word;
-	font-family: Arial;
-	font-size: 13px;
-}	
