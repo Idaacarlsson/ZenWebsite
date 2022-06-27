@@ -1,100 +1,116 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <link rel="stylesheet" type="text/css" href="firstpage.css">
+    <link rel="stylesheet" type="text/css" href="firstpagecss.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <meta charset="ISO-8859-1">
 
-<title>Annotation Tool</title>
+    <title>Annotation Tool</title>
 </head>
 
 <body>
-    
+
     <aside>
-        <table id="asideTable">
-            <tbody>			
-                <tr><td><span id="city"></span></td>
-                <td><span id="ipNbr"></span></td>				
-                </tr> 
-                <tr><td></td></tr>
-                <tr><td></td></tr>
-                <tr><td></td></tr>
-                <tr><td></td></tr>
-                <tr><td></td></tr>					
-                <tr><td><span id="degree"></span></td>
-                <td><span id="weather"></span></td>					
-                <td><span></span></td>
-                <td><span></span></td>
+        <div class="parent">
+            <table id="asideTable">
+                <tbody>
                     <tr>
-                <td colspan="4"><span id="sunrise"></span></td>
-            </tr>
-            <tr>
-                <td colspan="4"><span id="sunset"></span></td>
-            </tr>
-        </tbody></table>
-    </aside>	
+                        <tr</tr>
 
-    <article class="dot"></article>
+                        <td><span id="city"></span></td>
+                        <td><span id="ipNbr"></span></td>
+                    </tr>
+                    <tr>
+                        <td><span id="degree"></span></td>
+                        <td><span id="weather"></span></td>
+                        <td><span></span></td>
+                        <td><span></span></td>
+                </tbody>
+            </table>
+    </aside>
 
-<div class="parent">
+    <div class="parent">
 
-<img class="child" src="https://i.postimg.cc/pdJdRdBN/zenseact.png">
-</div>
-	<section id="body">	
-			<div class="parent">
-				<input type="button" value="START" id="createBtn">
-		</section>		
-	</section>
+        <img class="child" src="https://i.postimg.cc/pdJdRdBN/zenseact.png">
+    </div>
 
-    <script>
-        $(document).ready(function(){
+    <div class="child">
+
+        <select name="signtype" id="class-select">
+            <option value="">--Please choose a mode--</option>
+            <option value="">1</option>
+            <option value="Prohibitory_NoStopping">2</option>
+        </select>
+    </div>
+
+    <div class="child">
+
+        <select name="signtype" id="class-select">
+            <option value="">--Please choose an option--</option>
+            <option value="Prohibitory_NoUTurn">NoUturn</option>
+            <option value="Prohibitory_NoStopping">NoStopping</option>
+            <option value="Prohibitory_HeightLimit">HeightLimit</option>
+            <option value="Prohibitory_NoOvertaking">NoOvertaking</option>
+            <option value="Mandatory_TurnLeft">TurnLeft</option>
+            <option value="Mandatory_Roundabout">Roundabout</option>
+        </select>
+    </div>
+
+    <section id="body">
+
+        <div class="parent"><input type="button" value="START" id="createBtn" onclick="window.location.href='secondpage.html';">
+    </section>
+
+    <section id="body">
+        <input type="button" value="Leadership board" id="leaderButton">
+    </section>
+
+    <script>$(document).ready(function () {
             $.ajax({
-             method: "GET",
-             url: "http://api.ipstack.com/check?access_key=f0d0b90bbdec884d69ecc77b49fc274c",
-             error: ajaxReturn_Error,
-             success: ajaxReturn_Success
-        })
-        function ajaxReturn_Success(result, status, xhr) {
-            ParseJsonFile(result);
-        }
-        function ajaxReturn_Error(result, status, xhr) {
-            console.log("Ajax-find weather: "+status);
-        }
-        
+                method: "GET",
+                url: "http://api.ipstack.com/check?access_key=f0d0b90bbdec884d69ecc77b49fc274c",
+                error: ajaxReturn_Error,
+                success: ajaxReturn_Success
+            })
+            function ajaxReturn_Success(result, status, xhr) {
+                ParseJsonFile(result);
+            }
+            function ajaxReturn_Error(result, status, xhr) {
+                console.log("Ajax-find weather: " + status);
+            }
+
         });
-        
+
         // weather api
         function ParseJsonFile(result) {
-          var lat = result.latitude;
-          var long = result.longitude;
-          var city = result.city;
-          var ipNbr = result.ip
-          $("#city").text(city);
-          $("#ipNbr").text(ipNbr);
-          
-          $.ajax({
-                 method: "GET",
-                 url: "http://api.openweathermap.org/data/2.5/weather?lat="+lat+"&lon="+ long +"&units=metric"+ "&APPID=0aebca8155519cd776fe771d32a41872",
-                  error: ajaxWeatherReturn_Error,
-                  success: ajaxWeatherReturn_Success
-        })
-        function ajaxWeatherReturn_Success(result, status, xhr) {
-          var sunrise = result.sys.sunrise;
-          var sunset = result.sys.sunset;
-          var sunriseDate = new Date(sunrise*1000);
-          var timeStrSunrise = sunriseDate.toLocaleTimeString();
-          var sunsetDate = new Date(sunset*1000);
-          var timeStrSunset = sunsetDate.toLocaleTimeString();
-          $("#sunrise").text("Sunrise: "+timeStrSunrise);
-          $("#sunset").text("Sunset: "+timeStrSunset);
-          $("#weather").text(result.weather[0].main);
-          $("#degree").text(result.main.temp+" \u2103");
-        }
-        function ajaxWeatherReturn_Error(result, status, xhr) {
-            alert("Error i OpenWeaterMap Ajax");
-            }
-        }
-         
-        </script>
-    </body>
-    </html>
+            var lat = result.latitude;
+            var long = result.longitude;
+            var city = result.city;
+            var ipNbr = result.ip
+            $("#city").text(city);
+            $("#ipNbr").text(ipNbr);
 
+            $.ajax({
+                method: "GET",
+                url: "http://api.openweathermap.org/data/2.5/weather?lat=" + lat + "&lon=" + long + "&units=metric" + "&APPID=0aebca8155519cd776fe771d32a41872",
+                error: ajaxWeatherReturn_Error,
+                success: ajaxWeatherReturn_Success
+            })
+            function ajaxWeatherReturn_Success(result, status, xhr) {
+                var sunrise = result.sys.sunrise;
+                var sunset = result.sys.sunset;
+                var sunriseDate = new Date(sunrise * 1000);
+                var timeStrSunrise = sunriseDate.toLocaleTimeString();
+                var sunsetDate = new Date(sunset * 1000);
+                var timeStrSunset = sunsetDate.toLocaleTimeString();
+                $("#sunrise").text("Sunrise: " + timeStrSunrise);
+                $("#sunset").text("Sunset: " + timeStrSunset);
+                $("#weather").text(result.weather[0].main);
+                $("#degree").text(result.main.temp + " \u2103");
+            }
+            function ajaxWeatherReturn_Error(result, status, xhr) {
+                alert("Error i OpenWeaterMap Ajax");
+            }
+        }</script>
+</body>
+</html>
