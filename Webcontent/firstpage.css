@@ -1,0 +1,61 @@
+@charset "ISO-8859-1";
+@media screen and (max-width:1000px) {
+	.column {
+		width: 100%;
+	}
+}
+
+* {
+	box-sizing: border-box;
+}
+
+ body {
+	background-color: #2e2424;
+}
+
+#body {
+	margin-top: 10%; 
+}
+
+img {
+	display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 20%;
+
+}
+
+#city, #ipNbr {
+	font-style: bold;
+	
+}
+
+#asideTable{
+	float: right;
+	margin-top: 100px;
+	color: #bcbcc0;
+
+}
+
+#asideTable{
+	font-style: bold;
+    font-family: Helvetica;
+}
+
+.parent {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+#createBtn{
+	background-color: #4dd6cb;
+	color: #000000;
+	border: none;
+	padding: 10px 50px;
+	font: bold;
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+	border-radius: 3px;
+    font-weight: bold;
+}
+
