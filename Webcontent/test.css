@@ -1,0 +1,26 @@
+@media(max-width: 479px) {
+    .frame5-frame5 {
+      height:0;
+      overflow:hidden;
+      z-index: 100;
+      box-shadow: 5px 5px 10px 0px #D4D4D4;
+      border-color: var(--dl-color-gray-black);
+      border-width: 1px;
+      border-radius: var(--dl-radius-radius-radius4);
+      display: none;
+    }
+    .frame5-zenseact1 {
+      left: 27px;
+      width: 275px;
+      bottom: 29px;
+      height: 286px;
+    }
+    .frame5-text05 {
+      top: 395px;
+      left: 56px;
+    }
+  }
+  
+  .teleport-show {
+    display: contents;
+  }
