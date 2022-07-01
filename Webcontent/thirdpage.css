@@ -1,0 +1,132 @@
+@charset "ISO-8859-1";
+
+@media screen and (max-width:1000px) {
+    .column {
+        width: 100%;
+    }
+}
+
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: black;
+}
+
+#body {
+    margin-top: 2%;
+}
+
+
+
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 25%;
+}
+
+#city, #ipNbr {
+    font-style: bold;
+}
+
+#asideTable {
+    float: right;
+    margin-top: 100px;
+    color: #bcbcc0;
+}
+
+#asideTable {
+    font-style: bold;
+    font-family: Helvetica;
+}
+
+.parent {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+
+.child {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+/* Traffic sign = */
+
+.TrafficSignTxt{
+    text-align: center;
+    margin: 0px auto;
+    
+    font-family: 'Inter';
+    font-style: normal;
+    font-size: 36px;
+    line-height: 58px;
+    color: #F5F5F5;
+}
+.TrafficSignPng{
+    position:absolute;
+    top: 20px;
+    right: 110px;
+   
+  }
+
+
+section {
+    height: 200px;
+    width: 200px;
+    border: 1px solid #2d2d2d;
+    margin-bottom: 12px;
+  }
+  
+.responsive {
+    width: 100%;
+    height: auto;
+    top: 20px;
+    right: 110px;
+  }
+
+  .grid {
+    padding-top: 50px;
+    padding-right: 200px;
+    padding-left: 600px;
+    display: grid;
+    border: 1px solid;
+    gap: 2px;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .column-center {
+    display: grid;
+    justify-content: center;
+    gap: 4px;
+    align-content: center;
+    grid-auto-flow: column;
+  }
+  
+  .item-center {
+    display: grid;
+    grid-auto-flow: column;
+    gap: 4px;
+    align-items: center;
+    justify-items: center;
+  }
+  
+  div > div {
+    padding: 10px;
+    background-color: #ccc;
+  }
+
+
+/* Frame 4 */
+.frame{
+    
+    width: 300px;
+    height: 650px;
+    background: #7AF2EB;
+    
+}
