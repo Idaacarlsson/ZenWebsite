@@ -1,44 +1,44 @@
 @charset "ISO-8859-1";
+
 @media screen and (max-width:1000px) {
-	.column {
-		width: 100%;
-	}
+    .column {
+        width: 100%;
+    }
 }
 
 * {
-	box-sizing: border-box;
+    box-sizing: border-box;
 }
 
- body {
-	background-color: #1d1919;
+body {
+    background-color: black;
 }
 
 #body {
-	margin-top: 10%; 
+    margin-top: 2%;
 }
 
+
+
 img {
-	display: block;
+    display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 20%;
-
+    width: 30%;
 }
 
 #city, #ipNbr {
-	font-style: bold;
-	
+    font-style: bold;
 }
 
-#asideTable{
-	float: right;
-	margin-top: 100px;
-	color: #bcbcc0;
-
+#asideTable {
+    float: right;
+    margin-top: 100px;
+    color: #bcbcc0;
 }
 
-#asideTable{
-	font-style: bold;
+#asideTable {
+    font-style: bold;
     font-family: Helvetica;
 }
 
@@ -48,15 +48,47 @@ img {
     justify-content: center;
 }
 
-#createBtn{
-	background-color: #4dd6cb;
-	color: #000000;
-	border: none;
-	padding: 10px 50px;
-	font: bold;
-	font-family: Verdana, Geneva, Tahoma, sans-serif;
-	border-radius: 3px;
-    font-weight: bold;
+
+.child {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
 }
 
+#createBtn {
+    background-color: #4dd6cb;
+    color: white;
+    ActiveBorder: aquamarine;
+    padding: 10px 50px;
+    font: bold;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    border-radius: 3px;
+    font-weight: lighter;
+}
+
+#leaderButton {
+    background-color: #4dd6cb;
+    color: white;
+    ActiveBorder: aquamarine;
+    padding: 10px 50px;
+    font: bold;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    border-radius: 3px;
+    font-weight: lighter;
+    display: inline-block;
+    margin-top: 1px;
+	margin-right: 2px;
+	position:absolute;
+	top:0;
+	left:0;
+}
+
+#class_select {
+    background-color: #4dd6cb;
+    color: white;
+    ActiveBorder: aquamarine;
+    padding: 10px 50px;
+    font: bold;
+    font-family: Verdana, Geneva, Tahoma, sans-serif
+}
 
