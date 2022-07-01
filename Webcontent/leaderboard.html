@@ -1,86 +1,224 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <link rel="stylesheet" type="text/css" href="firstpage.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-    <meta charset="ISO-8859-1">
-
-    <title>Annotation Tool</title>
+	<meta charset="UTF-8">
+	<title>Leaderboard</title>
+	<link rel="stylesheet" type="text/css" href="leaderboard.css">
 </head>
-
 <body>
 
-    <aside>
-        <div class="parent">
-            <table id="asideTable">
-                <tbody>
-                    <tr>
-
-                        <td><span id="city"></span></td>
-                        <td><span id="ipNbr"></span></td>
-                    </tr>
-                    <tr>
-                        <td><span id="degree"></span></td>
-                        <td><span id="weather"></span></td>
-                        <td><span></span></td>
-                        <td><span></span></td>
-                </tbody>
-            </table>
-    </aside>
-
-    <div class="parent">
-
+	<div class="parent">
         <img class="child" src="https://i.postimg.cc/pdJdRdBN/zenseact.png">
     </div>
 
+	<section id="body">
+        <input type="button" value="Back" id="home" onclick="window.location.href='firstpage.html';">
+    </section>
 
 
-    <script>$(document).ready(function () {
-            $.ajax({
-                method: "GET",
-                url: "http://api.ipstack.com/check?access_key=f0d0b90bbdec884d69ecc77b49fc274c",
-                error: ajaxReturn_Error,
-                success: ajaxReturn_Success
-            })
-            function ajaxReturn_Success(result, status, xhr) {
-                ParseJsonFile(result);
-            }
-            function ajaxReturn_Error(result, status, xhr) {
-                console.log("Ajax-find weather: " + status);
-            }
 
-        });
 
-        // weather api
-        function ParseJsonFile(result) {
-            var lat = result.latitude;
-            var long = result.longitude;
-            var city = result.city;
-            var ipNbr = result.ip
-            $("#city").text(city);
-            $("#ipNbr").text(ipNbr);
+<div class="wrapper">
+	<div class="lboard_section">
+		<div class="lboard_tabs">
+			<div class="tabs">
+				<ul>
+					<li data-li="today">Today</li>
+					<li class="active" data-li="month">Month</li>
+					<li data-li="year">Year</li>
+				</ul>
+			</div>
+		</div>
 
-            $.ajax({
-                method: "GET",
-                url: "http://api.openweathermap.org/data/2.5/weather?lat=" + lat + "&lon=" + long + "&units=metric" + "&APPID=0aebca8155519cd776fe771d32a41872",
-                error: ajaxWeatherReturn_Error,
-                success: ajaxWeatherReturn_Success
-            })
-            function ajaxWeatherReturn_Success(result, status, xhr) {
-                var sunrise = result.sys.sunrise;
-                var sunset = result.sys.sunset;
-                var sunriseDate = new Date(sunrise * 1000);
-                var timeStrSunrise = sunriseDate.toLocaleTimeString();
-                var sunsetDate = new Date(sunset * 1000);
-                var timeStrSunset = sunsetDate.toLocaleTimeString();
-                $("#sunrise").text("Sunrise: " + timeStrSunrise);
-                $("#sunset").text("Sunset: " + timeStrSunset);
-                $("#weather").text(result.weather[0].main);
-                $("#degree").text(result.main.temp + " \u2103");
-            }
-            function ajaxWeatherReturn_Error(result, status, xhr) {
-                alert("Error i OpenWeaterMap Ajax");
-            }
-        }</script>
+		<div class="lboard_wrap">
+			<div class="lboard_item today" style="display: none;">
+				<div class="lboard_mem">
+	
+					<div class="name_bar">
+						<p><span>1.</span>Ida Carlsson</p>
+						<div class="bar_wrap">
+							<div class="inner_bar" style="width: 95%"></div>
+						</div>
+					</div>
+					<div class="points">
+						195 points
+					</div>
+				</div>
+				<div class="lboard_mem">
+					<div class="name_bar">
+						<p><span>2.</span>Zakaria Hersi</p>
+						<div class="bar_wrap">
+							<div class="inner_bar" style="width: 80%"></div>
+						</div>
+					</div>
+					<div class="points">
+						185 points
+					</div>
+				</div>
+				<div class="lboard_mem">
+				
+					<div class="name_bar">
+						<p><span>3.</span>Willem Verbecke</p>
+						<div class="bar_wrap">
+							<div class="inner_bar" style="width: 60%;"></div>
+						</div>
+					</div>
+					<div class="points">
+						160 points
+					</div>
+				</div>
+				<div class="lboard_mem">
+				
+					<div class="name_bar">
+						<p><span>4.</span>Olle Månsson</p>
+						<div class="bar_wrap">
+							<div class="inner_bar" style="width: 30%"></div>
+						</div>
+					</div>
+					<div class="points">
+						130 points
+					</div>
+				</div>
+				<div class="lboard_mem">
+					
+					<div class="name_bar">
+						<p><span>5.</span>William Ljungbergh</p>
+						<div class="bar_wrap">
+							<div class="inner_bar" style="width: 10%"></div>
+						</div>
+					</div>
+					<div class="points">
+						110 points
+					</div>
+				</div>
+			</div>
+			<div class="lboard_item month" style="display: block;">
+				<div class="lboard_mem">
+				
+					<div class="name_bar">
+						<p><span>1.</span> Ida Carlsson</p>
+						<div class="bar_wrap">
+							<div class="inner_bar" style="width: 95%"></div>
+						</div>
+					</div>
+					<div class="points">
+						1195 points
+					</div>
+				</div>
+				<div class="lboard_mem">
+				
+					<div class="name_bar">
+						<p><span>2.</span>Zakaria Hersi</p>
+						<div class="bar_wrap">
+							<div class="inner_bar" style="width: 80%"></div>
+						</div>
+					</div>
+					<div class="points">
+						1185 points
+					</div>
+				</div>
+				<div class="lboard_mem">
+				
+					<div class="name_bar">
+						<p><span>3.</span>Willem Verbecke</p>
+						<div class="bar_wrap">
+							<div class="inner_bar" style="width: 70%;"></div>
+						</div>
+					</div>
+					<div class="points">
+						1160 points
+					</div>
+				</div>
+				<div class="lboard_mem">
+			
+					<div class="name_bar">
+						<p><span>4.</span>Olle Månsson</p>
+						<div class="bar_wrap">
+							<div class="inner_bar" style="width: 50%"></div>
+						</div>
+					</div>
+					<div class="points">
+						1130 points
+					</div>
+				</div>
+				<div class="lboard_mem">
+				
+					<div class="name_bar">
+						<p><span>5.</span>William Ljungbergh</p>
+						<div class="bar_wrap">
+							<div class="inner_bar" style="width: 30%"></div>
+						</div>
+					</div>
+					<div class="points">
+						1110 points
+					</div>
+				</div>
+			</div>
+			<div class="lboard_item year" style="display: none;">
+				<div class="lboard_mem">
+				
+					<div class="name_bar">
+						<p><span>1.</span>Ida Carlsson</p>
+						<div class="bar_wrap">
+							<div class="inner_bar" style="width: 90%"></div>
+						</div>
+					</div>
+					<div class="points">
+						2195 points
+					</div>
+				</div>
+				<div class="lboard_mem">
+				
+					<div class="name_bar">
+						<p><span>2.</span>Zakaria Hersi</p>
+						<div class="bar_wrap">
+							<div class="inner_bar" style="width: 85%"></div>
+						</div>
+					</div>
+					<div class="points">
+						2185 points
+					</div>
+				</div>
+				<div class="lboard_mem">
+				
+					<div class="name_bar">
+						<p><span>3.</span>Willem Verbecke</p>
+						<div class="bar_wrap">
+							<div class="inner_bar" style="width: 65%;"></div>
+						</div>
+					</div>
+					<div class="points">
+						2160 points
+					</div>
+				</div>
+				<div class="lboard_mem">
+					<div class="name_bar">
+						<p><span>4.</span>Olle Månsson</p>
+						<div class="bar_wrap">
+							<div class="inner_bar" style="width: 30%"></div>
+						</div>
+					</div>
+					<div class="points">
+						2130 points
+					</div>
+				</div>
+				<div class="lboard_mem">
+				
+					<div class="name_bar">
+						<p><span>5.</span>William Ljungbergh</p>
+						<div class="bar_wrap">
+							<div class="inner_bar" style="width: 10%"></div>
+						</div>
+					</div>
+					<div class="points">
+						2110 points
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>	
+
+<script src="scripts.js"></script>
 </body>
 </html>
