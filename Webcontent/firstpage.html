@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <link rel="stylesheet" type="text/css" href="firstpagecss.css">
+    <link rel="stylesheet" type="text/css" href="firstpage.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <meta charset="ISO-8859-1">
 
@@ -9,7 +9,6 @@
 </head>
 
 <body>
-
     <aside>
         <div class="parent">
             <table id="asideTable">
@@ -62,55 +61,9 @@
     </section>
 
     <section id="body">
-        <input type="button" value="Leadership board" id="leaderButton">
+        <input type="button" value="Leadership board" id="leaderButton" onclick="window.location.href='leaderboard.html';">
     </section>
 
-    <script>$(document).ready(function () {
-            $.ajax({
-                method: "GET",
-                url: "http://api.ipstack.com/check?access_key=f0d0b90bbdec884d69ecc77b49fc274c",
-                error: ajaxReturn_Error,
-                success: ajaxReturn_Success
-            })
-            function ajaxReturn_Success(result, status, xhr) {
-                ParseJsonFile(result);
-            }
-            function ajaxReturn_Error(result, status, xhr) {
-                console.log("Ajax-find weather: " + status);
-            }
 
-        });
-
-        // weather api
-        function ParseJsonFile(result) {
-            var lat = result.latitude;
-            var long = result.longitude;
-            var city = result.city;
-            var ipNbr = result.ip
-            $("#city").text(city);
-            $("#ipNbr").text(ipNbr);
-
-            $.ajax({
-                method: "GET",
-                url: "http://api.openweathermap.org/data/2.5/weather?lat=" + lat + "&lon=" + long + "&units=metric" + "&APPID=0aebca8155519cd776fe771d32a41872",
-                error: ajaxWeatherReturn_Error,
-                success: ajaxWeatherReturn_Success
-            })
-            function ajaxWeatherReturn_Success(result, status, xhr) {
-                var sunrise = result.sys.sunrise;
-                var sunset = result.sys.sunset;
-                var sunriseDate = new Date(sunrise * 1000);
-                var timeStrSunrise = sunriseDate.toLocaleTimeString();
-                var sunsetDate = new Date(sunset * 1000);
-                var timeStrSunset = sunsetDate.toLocaleTimeString();
-                $("#sunrise").text("Sunrise: " + timeStrSunrise);
-                $("#sunset").text("Sunset: " + timeStrSunset);
-                $("#weather").text(result.weather[0].main);
-                $("#degree").text(result.main.temp + " \u2103");
-            }
-            function ajaxWeatherReturn_Error(result, status, xhr) {
-                alert("Error i OpenWeaterMap Ajax");
-            }
-        }</script>
 </body>
 </html>
