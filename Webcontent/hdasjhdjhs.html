@@ -1,0 +1,41 @@
+<div class="parent">
+    <img class="child" src="https://i.postimg.cc/pdJdRdBN/zenseact.png">
+</div>
+
+<div class="child">
+    <div>
+        <input type="text" id="username" placeholder="Enter username: s000xxxx" pattern="s000[\d]{4}">
+    </div>
+</div>
+
+<div class="child">
+    <div class="dropdown">
+        <select id="mode-select" class="dropbtn">
+            <option value="none" selected disabled hidden>-- Select a mode --</option>
+            <option value="traditional">Mode 1: Traditional</option>
+            <option value="grid-view">Mode 2: Grid-View</option>
+        </select>
+    </div>
+</div>
+
+<br>
+<br>
+
+<section>
+    <div class="parent">
+        <form id="myForm" action="/refinement/next" method="post">
+            <input id="createBtn" type="submit" name="next-annotation-button" value="START">
+        </form>
+</section>
+
+<section>
+    <input id="leaderButton" type="button" value="Leaderboard">
+</section>
+
+<script>
+    var modeSelect = document.getElementById("mode-select");
+    modeSelect.addEventListener('change', function () {
+        var modeButton = document.getElementById("mode-button");
+        modeButton.innerText = modeSelect.value;
+    });
+</script>
