@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel="stylesheet" type="text/css" href="refinement.css">
+  <meta charset="ISO-8859-1">
+  <title>Annotation Tool</title>
+
+</head>
+
+<body>
+
+  <div class="container">
+
+    <div class="top">
+      <input type="button" value="Settings" id="createBtnSettings" onclick="showSettings()">
+      <br>
+      <input type="button" value="Keybindnings" id="createBtnKeybindnings" onclick="showKeybindings()">
+      <input type="button" value="Manual annotation" id="createBtnManualAnnoation" onclick="showManualAnnotation()">
+    </div>
+    <div class="left">
+      <section id="teleport-show">
+        <link href="./frame5.css" rel="stylesheet" />
+        <div>
+          <div id="keyshortcuts" class="leftFrame teleport-show" style="display: none;">
+            <span class="titleText">KEYBINDINGS</span>
+            <img alt="zenseact13916" src="https://i.postimg.cc/pdJdRdBN/zenseact.png" class="zenseactlogo" />
+            <span class="text01">a</span>
+            <span class="text02">space</span>
+            <span class="text03">Ctrl-a</span>
+            <span class="text04">ctrl-r</span>
+            <span class="text05">b</span>
+            <span class="text06">enter / m</span>
+            <span class="text07">r</span>
+            <span class="text08">u</span>
+            <span class="text09">x</span>
+            <span class="text10">c</span>
+            <span class="text11">h</span>
+            <span class="text12">Accept annotation</span>
+            <span class="text13">Accept prediction</span>
+            <span class="text14">Reject annotation as unclear</span>
+            <span class="text15">Clear all annotations</span>
+            <span class="text16">Toggle refine class</span>
+            <span class="text17">Toggle refine electronic</span>
+            <span class="text18">Skip annotatiojn</span>
+            <span class="text19">Focus manual menu</span>
+            <span class="text20">Show variants of annotation</span>
+            <span class="text21">Show variants of prediction</span>
+            <span class="text22">
+              <span>Toggle bounding box on sign</span>
+              <br />
+              <span>image</span>
+            </span>
+          </div>
+        </div>
+      </section>
+
+      <section id="teleport-show">
+
+        <link href="./frame5.css" rel="stylesheet" />
+        <div>
+          <div id="settings" class="leftFrame teleport-show" style="display: none;">
+            <span class="titleText">SETTINGS</span>
+            <br>
+            <br>
+            <label class="containerLabel">Area scaling
+              <input type="checkbox">
+              <span class="checkmark"></span>
+            </label>
+            <label class="containerLabel"> Automatic next enabled
+              <input type="checkbox">
+              <span class="checkmark"></span>
+            </label>
+            <label class="containerLabel"> Refine is_electronic enabled
+              <input type="checkbox">
+              <span class="checkmark"></span>
+            </label>
+            <label class="containerLabel"> Refine class enabled
+              <input type="checkbox">
+              <span class="checkmark"></span>
+            </label>
+            <form>
+              <input type="text" id="class-filter" name="class-filter" placeholder="Input class filter">
+            </form>
+            <br>
+            <form>
+              <input type="text" id="country-filter" name="country-filter" placeholder="Input country filter">
+            </form>
+            <br>
+            <form>
+              <input type="text" id="incoming/existing toggle" name="incoming/existing toggle"
+                placeholder="incoming/existing toggle">
+            </form>
+            <br>
+            <select name="signtype" id="class-select">
+              <option value="">--choose scoring method--</option>
+              <option value="">1</option>
+              <option value="Prohibitory_NoStopping">2</option>
+            </select>
+            <br>
+            <br>
+            <input type="button" value="Apply Filter" id="btnApplyFilter">
+            <img alt="zenseact13916" src="https://i.postimg.cc/pdJdRdBN/zenseact.png" class="zenseactlogo" /> </br>
+            <span></span>
+            </span>
+          </div>
+        </div>
+      </section>
+
+    </div>
+
+    <div class="middle">
+      <div class='main-content-container'>
+        <div class='containerMiddle'>
+          <a href='#'><img src="img/item-01.png" alt=""></a>
+        </div>
+        <div class='containerMiddle'>
+          <a href='#'><img src="img/item-01.png" alt=""></a>
+        </div>
+        <div class='containerMiddle'>
+          <a href='#'><img src="img/item-01.png" alt=""></a>
+
+        </div>
+      </div>
+    </div>
+
+
+
+
+    <div class="right">
+      <section id="teleport-showRight">
+
+        <div id="manualAnnotation" class="ManualAnnoation-MA teleport-showRight" style="display: none;">
+          <span class="titleText">Manual Annotation</span>
+          <form>
+            <input type="text" id="searchbar" name="class-filter" placeholder="Search">
+          </form>
+          <br>
+          <fieldset id="corner">
+            <legend>Is electronic? </legend>
+            <label class="containerLabel">
+              <input type="checkbox"> True
+              <span class="checkmark"></span>
+            </label>
+            <label class="containerLabel">
+              <input type="checkbox"> False
+              <span class="checkmark"></span>
+            </label>
+          </fieldset>
+          <br>
+
+          <input type="button" value="Apply Annotation" id="btnApplyAnnotation">
+
+        </div>
+
+        <div>
+          <div id="pathAttributes" class="pathAttributesFrame">
+            <span class="titleText">Patch attributes</span>
+            <br></br>
+            <span class="titleText">Frame score:</span>
+            <br>
+            <span class="titleText">Frame rank: </span>
+            <br>
+            <span class="titleText">Hardware type: </span>
+            <br>
+            <span class="titleText">Is odd: </span>
+            <br>
+            <span class="titleText">Has inner sign: </span>
+            <br>
+            <span class="titleText">Frame id: </span>
+            <br>
+            <span class="titleText">Task ID:</span>
+            <br>
+            <span class="titleText">Annotation Path: </span>
+            <br>
+            <span class="titleText">Country: </span>
+            <br>
+            </span>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+
+  <script>
+
+    function showKeybindings() {
+
+      var x = document.getElementById('keyshortcuts');
+      var y = document.getElementById('settings');
+      if (x.style.display !== 'block') {
+        x.style.display = 'block';
+      }
+      else {
+        x.style.display = 'none';
+      }
+      y.style.display = 'none';
+    }
+
+    function showSettings() {
+
+      var x = document.getElementById('settings');
+      var y = document.getElementById('keyshortcuts');
+
+      if (x.style.display !== 'block') {
+        x.style.display = 'block';
+      }
+
+      else {
+        x.style.display = 'none';
+      }
+
+      y.style.display = 'none';
+
+    }
+
+    function showManualAnnotation() {
+
+      var x = document.getElementById('manualAnnotation');
+
+      if (x.style.display !== 'block') {
+        x.style.display = 'block';
+      }
+
+      else {
+        x.style.display = 'none';
+      }
+
+      y.style.display = 'none';
+    }
+  </script>
+</body>
+
+</html>

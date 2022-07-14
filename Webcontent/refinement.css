@@ -1,0 +1,1158 @@
+@media screen and (max-width:1000px) {
+  .column {
+    width: 100%;
+  }
+}
+
+
+html {
+  width: 100%;
+  min-height: calc(100vh - 3rem);
+  margin: 0;
+  padding: 0;
+
+  background-color: #000000;
+}
+
+body {
+  width: calc(100% - 2rem);
+  height: calc(100%);
+  margin: 0;
+  padding: 1rem;
+  overflow-y: hidden;
+  /* Hide vertical scrollbar */
+  overflow-x: hidden;
+  /* Hide horizontal scrollbar */
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  background-repeat: no-repeat;
+
+}
+
+
+.dropbtn {
+  background-color: #ed226e;
+  color: white;
+  padding: 10px 50px;
+  font-size: 16px;
+  border-radius: 4px;
+  border: none;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+ 
+
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+  padding: 10px 50px;
+  position: absolute;
+  top: 85px;
+  right: -55px;
+}
+
+.dropdown:hover .dropbtn {
+  background-color: #4dd6cb;
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+}
+
+.left {
+  width: 20%;
+  height: 100%;
+  float: left;
+  background-color: rgb(0, 0, 0);
+  border-collapse: collapse;
+}
+
+#xy {
+
+  color: #F5F5F5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 10px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  
+}
+
+.middle {
+  width: 60%;
+  height: 100%;
+  float: left;
+  background-color: rgb(0, 0, 0);
+  border-collapse: collapse;
+}
+
+.right {
+  width: 20%;
+  height: 100%;
+  position: relative;
+  float: right;
+  background-color: rgb(0, 0, 0);
+  border-collapse: collapse;
+}
+
+.top {
+  width: 100%;
+  height: 200px;
+  border-collapse: collapse;
+  background-color: #000000;
+}
+
+.main-content-container {
+  max-width: 1500px;
+  margin-top: 300px;
+  padding: 10px;
+  background: rgb(3, 3, 3);
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+
+.containerMiddle {
+  height: 300px;
+  width: 500px;
+  margin: 10px 1em;
+  padding-left: 10px;
+  padding-right: 10px;
+  /*   background: lightyellow; */
+  flex: 0 1 20%;
+}
+
+
+img {
+  max-width: 100%;
+  margin: 0;
+}
+
+
+.flex-parent {
+  border: solid #4DD6CB;
+  height: 250px;
+  display: flex;
+}
+
+.flex-child {
+
+
+  flex: 1;
+  /* takes care of the width / height */
+  border: solid #ED226E;
+}
+
+.flex-child img {
+  height: 240px;
+  width: 400px;
+}
+
+#createBtnSettings {
+  background-color: #4DD6CB;
+  color: white;
+  padding: 10px 50px;
+  font-size: 16px;
+  border-radius: 4px;
+  border: none;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  position: absolute;
+  top: 5px;
+  left: 0;
+}
+
+#createBtnKeybindnings {
+  background-color: #4DD6CB;
+  color: white;
+  padding: 10px 50px;
+  font-size: 16px;
+  border-radius: 4px;
+  border: none;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  position: absolute;
+  top: 50px;
+  left: 0;
+}
+
+#createBtnManualAnnoation {
+  background-color: #4DD6CB;
+  color: white;
+  padding: 10px 55px;
+  font-size: 16px;
+  border-radius: 4px;
+  border: none;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  position: absolute;
+  top: 50px;
+  right: 0;
+}
+
+
+
+#startpage {
+  background-color: #4DD6CB;
+  color: white;
+  padding: 10px 84px;
+  font-size: 16px;
+  border-radius: 4px;
+  border: none;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  position: absolute;
+  top: 5px;
+  right: 0;
+}
+
+
+
+.containerLabel {
+  color: #F5F5F5;
+  display: block;
+  position: relative;
+  padding-left: 40px;
+  margin-bottom: 12px;
+  font-size: 15px;
+}
+
+.containerLabel input {
+  margin: 0 auto;
+  display: flex;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 10px;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+}
+
+/* On mouse-over, add a grey background color */
+.containerLabel:hover input~.checkmark {
+  background-color: #ccc;
+}
+
+/* When the checkbox is checked, add a blue background */
+.containerLabel input:checked~.checkmark {
+  background-color: #4DD6CB;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.containerLabel input:checked~.checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.containerLabel .checkmark:after {
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+#class_select {
+  background-color: #4DD6CB;
+  color: white;
+  padding: 10px 50px;
+  font: bold;
+  font-family: Verdana, Geneva, Tahoma, sans-serif
+}
+
+
+input[type=text] {
+  width: 90%;
+  padding: 12px 20px;
+  box-sizing: border-box;
+  border: 1px solid #555;
+  outline: none;
+  margin: 0 auto;
+  display: flex;
+
+}
+
+input[type=text]:focus {
+  background-color: #4DD6CB;
+
+}
+
+#btnApplyFilter {
+  background-color: #4DD6CB;
+  color: white;
+  border-color: #F5F5F5(149, 149, 149);
+  padding: 8px 30px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  margin: 0 auto;
+  display: flex;
+
+}
+
+
+input[type=text],
+select {
+  width: 95%;
+  padding: 8px 20px;
+  margin: 0 auto;
+  display: flex;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#corner {
+  color: #F5F5F5;
+}
+
+#Electronic {
+  color: #F5F5F5;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+}
+
+
+
+#corner1 {
+  color: #F5F5F5;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+}
+
+
+#btnApplyAnnotation {
+  background-color: #4DD6CB;
+  color: white;
+  border-color: #F5F5F5(149, 149, 149);
+  padding: 8px 30px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  margin: 0 auto;
+  display: flex;
+
+
+}
+
+#hej {
+  color: #F5F5F5;
+  padding: 8px 30px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  margin: 0 auto;
+  display: flex;
+  margin-top: 20px;
+}
+
+
+
+/*Left/right frame Settings/keybildning/manual annotation*/
+
+.leftFrame {
+  margin-top: 0%;
+  top: 0px;
+  left: 0px;
+  width: 342px;
+  height: 760px;
+  display: flex;
+  overflow: hidden;
+  position: relative;
+  max-width: 342px;
+  box-sizing: border-box;
+  transition: 0.3s;
+  align-items: flex-start;
+  border-color: transparent;
+  background: #ED226E;
+}
+
+.ManualAnnoation-MA {
+  margin-top: -10%;
+  float: right;
+  width: 342px;
+  height: 230px;
+  display: flex;
+  overflow: hidden;
+  position: relative;
+  max-width: 342px;
+  box-sizing: border-box;
+  transition: 0.3s;
+  align-items: flex-start;
+  background: #ED226E;
+  border-radius: 5;
+}
+
+.pathAttributesFrame {
+  margin-top: 75%;
+  top: 0px;
+  right: 5px;
+  width: 342px;
+  height: 480px;
+  display: flex;
+  overflow: hidden;
+  position: absolute;
+  max-width: 342px;
+  box-sizing: border-box;
+  transition: 0.3s;
+  align-items: flex-start;
+  background: #ED226E;
+  border-radius: 5;
+}
+
+
+.titleText {
+  color: #F5F5F5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.text {
+  top: 8px;
+  left: 37%;
+  color: #F5F5F5;
+  height: auto;
+  position: absolute;
+  font-size: 14px;
+  align-self: auto;
+  font-style: normal;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 700px;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+
+.zenseactlogo {
+  top: 460px;
+  left: 11px;
+  width: 321px;
+  height: 365px;
+  position: absolute;
+  box-sizing: border-box;
+  object-fit: cover;
+  border-color: transparent;
+}
+
+.text01 {
+  top: 64px;
+  left: 44px;
+  color: #F5F5F5;
+  height: auto;
+  position: absolute;
+  font-size: 14px;
+  align-self: auto;
+  font-style: normal;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 700px;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+
+.text02 {
+  top: 251px;
+  left: 44px;
+  color: #F5F5F5;
+  width: 93px;
+  height: auto;
+  position: absolute;
+  font-size: 14px;
+  align-self: auto;
+  font-style: normal;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 700px;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+
+.text03 {
+  top: 314px;
+  left: 44px;
+  color: #F5F5F5;
+  height: auto;
+  position: absolute;
+  font-size: 14px;
+  align-self: auto;
+  font-style: normal;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 700px;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+
+.text04 {
+  top: 358px;
+  left: 44px;
+  color: #F5F5F5;
+  height: auto;
+  position: absolute;
+  font-size: 14px;
+  align-self: auto;
+  font-style: normal;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 700px;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+
+.text05 {
+  top: 387px;
+  left: 44px;
+  color: #F5F5F5;
+  height: auto;
+  position: absolute;
+  font-size: 14px;
+  align-self: auto;
+  font-style: normal;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 700px;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+
+.text06 {
+  top: 285px;
+  left: 43px;
+  color: #F5F5F5;
+  height: auto;
+  position: absolute;
+  font-size: 14px;
+  align-self: auto;
+  font-style: normal;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 700px;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+
+.text07 {
+  top: 94px;
+  left: 44px;
+  color: #F5F5F5;
+  height: auto;
+  position: absolute;
+  font-size: 14px;
+  align-self: auto;
+  font-style: normal;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 700px;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+
+.text08 {
+  top: 123px;
+  left: 44px;
+  color: #F5F5F5;
+  height: auto;
+  position: absolute;
+  font-size: 14px;
+  align-self: auto;
+  font-style: normal;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 700px;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+
+.text09 {
+  top: 155px;
+  left: 44px;
+  color: #F5F5F5;
+  height: auto;
+  position: absolute;
+  font-size: 14px;
+  align-self: auto;
+  font-style: normal;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 700px;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+
+.text10 {
+  top: 187px;
+  left: 44px;
+  color: #F5F5F5;
+  height: auto;
+  position: absolute;
+  font-size: 14px;
+  align-self: auto;
+  font-style: normal;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 700px;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+
+.text11 {
+  top: 217px;
+  left: 45px;
+  color: #F5F5F5;
+  height: auto;
+  position: absolute;
+  font-size: 14px;
+  align-self: auto;
+  font-style: normal;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 700px;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+
+.text12 {
+  top: 64px;
+  left: 143px;
+  color: #F5F5F5;
+  height: auto;
+  position: absolute;
+  font-size: 14px;
+  align-self: auto;
+  font-style: normal;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 700px;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+
+.text13 {
+  top: 96px;
+  left: 143px;
+  color: #F5F5F5;
+  height: auto;
+  position: absolute;
+  font-size: 14px;
+  align-self: auto;
+  font-style: normal;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 700px;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+
+.text14 {
+  top: 123px;
+  left: 143px;
+  color: #F5F5F5;
+  height: auto;
+  position: absolute;
+  font-size: 14px;
+  align-self: auto;
+  font-style: normal;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 700px;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+
+.text15 {
+  top: 155px;
+  left: 143px;
+  color: #F5F5F5;
+  height: auto;
+  position: absolute;
+  font-size: 14px;
+  align-self: auto;
+  font-style: normal;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 700px;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+
+.text16 {
+  top: 180px;
+  left: 144px;
+  color: #F5F5F5;
+  height: auto;
+  position: absolute;
+  font-size: 14px;
+  align-self: auto;
+  font-style: normal;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 700px;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+
+.text17 {
+  top: 214px;
+  left: 143px;
+  color: #F5F5F5;
+  height: auto;
+  position: absolute;
+  font-size: 14px;
+  align-self: auto;
+  font-style: normal;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 700px;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+
+.text18 {
+  top: 250px;
+  left: 143px;
+  color: #F5F5F5;
+  height: auto;
+  position: absolute;
+  font-size: 14px;
+  align-self: auto;
+  font-style: normal;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 700px;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+
+.text19 {
+  top: 281px;
+  left: 144px;
+  color: #F5F5F5;
+  height: auto;
+  position: absolute;
+  font-size: 14px;
+  align-self: auto;
+  font-style: normal;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 700px;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+
+.text20 {
+  top: 314px;
+  left: 144px;
+  color: #F5F5F5;
+  height: auto;
+  position: absolute;
+  font-size: 14px;
+  align-self: auto;
+  font-style: normal;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 700px;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+
+.text21 {
+  top: 358px;
+  left: 143px;
+  color: #F5F5F5;
+  height: auto;
+  position: absolute;
+  font-size: 14px;
+  align-self: auto;
+  font-style: normal;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 700px;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+
+.text22 {
+  top: 389px;
+  left: 144px;
+  color: #F5F5F5;
+  height: auto;
+  position: absolute;
+  font-size: 14px;
+  align-self: auto;
+  font-style: normal;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 700px;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+
+.teleport-show {
+  top: 0px;
+  left: 5px;
+}
+
+.teleport-showRight {
+  top: 0px;
+  right: 5px;
+}
+
+
+#xy {
+
+  color: #F5F5F5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+
+}
+
+
+.frame6-frame6 {
+  margin-top: 58%;
+  top: 0px;
+  right: 5px;
+  width: 342px;
+  height: 550px;
+  display: flex;
+  overflow: hidden;
+  position: absolute;
+  max-width: 342px;
+  box-sizing: border-box;
+  transition: 0.3s;
+  align-items: flex-start;
+  background: #ED226E;
+  border-radius: 5;
+}
+
+.frame6-text {
+  top: 75px;
+  left: 28px;
+  color: rgba(245, 245, 245, 1);
+  width: 103px;
+  height: auto;
+  position: absolute;
+  font-size: 12px;
+  align-self: auto;
+  font-style: normal;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 400px;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+
+.frame6-text01 {
+  top: 183px;
+  left: 21px;
+  color: rgba(245, 245, 245, 1);
+  width: 99px;
+  height: auto;
+  position: absolute;
+  font-size: 12px;
+  align-self: auto;
+  font-style: normal;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 400px;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+
+.frame6-text02 {
+  top: 237px;
+  left: 41px;
+  color: rgba(245, 245, 245, 1);
+  width: 99px;
+  height: auto;
+  position: absolute;
+  font-size: 12px;
+  align-self: auto;
+  font-style: normal;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 400px;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+
+.frame6-text03 {
+  top: 292px;
+  left: 22px;
+  color: rgba(245, 245, 245, 1);
+  width: 94px;
+  height: auto;
+  position: absolute;
+  font-size: 12px;
+  align-self: auto;
+  font-style: normal;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 400px;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+
+.frame6-text04 {
+  top: 345px;
+  left: 42px;
+  color: rgba(245, 245, 245, 1);
+  width: 72px;
+  height: auto;
+  position: absolute;
+  font-size: 12px;
+  align-self: auto;
+  font-style: normal;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 400px;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+
+.frame6-text05 {
+  top: 399px;
+  left: 42px;
+  color: rgba(245, 245, 245, 1);
+  width: 99px;
+  height: auto;
+  position: absolute;
+  font-size: 12px;
+  align-self: auto;
+  font-style: normal;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 400px;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+
+.frame6-text06 {
+  top: 453px;
+  left: 17px;
+  color: rgba(245, 245, 245, 1);
+  width: 103px;
+  height: auto;
+  position: absolute;
+  font-size: 12px;
+  align-self: auto;
+  font-style: normal;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 400px;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+
+.frame6-text07 {
+  top: 508px;
+  left: 42px;
+  color: rgba(245, 245, 245, 1);
+  width: 62px;
+  height: auto;
+  position: absolute;
+  font-size: 12px;
+  align-self: auto;
+  font-style: normal;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 400px;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+
+.frame6-text08 {
+  top: 129px;
+  left: 31px;
+  color: rgba(245, 245, 245, 1);
+  width: 80px;
+  height: auto;
+  position: absolute;
+  font-size: 12px;
+  align-self: auto;
+  font-style: normal;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 400px;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+
+.frame6-frame7 {
+  top: 76px;
+  left: 114px;
+  width: 188px;
+  display: flex;
+  position: absolute;
+  box-sizing: border-box;
+  align-items: flex-start;
+  flex-shrink: 1;
+  border-color: transparent;
+  flex-direction: column;
+}
+
+.frame6-rectangle60 {
+  width: 188px;
+  height: 13px;
+  margin: 0 0 41px 0;
+  position: relative;
+  box-sizing: border-box;
+  object-fit: cover;
+  border-color: transparent;
+  background-color: rgba(122, 242, 235, 1);
+}
+
+.frame6-rectangle68 {
+  width: 188px;
+  height: 13px;
+  margin: 0 0 41px 0;
+  position: relative;
+  box-sizing: border-box;
+  object-fit: cover;
+  border-color: transparent;
+  background-color: rgba(122, 242, 235, 1);
+}
+
+.frame6-rectangle67 {
+  width: 188px;
+  height: 13px;
+  margin: 0 0 41px 0;
+  position: relative;
+  box-sizing: border-box;
+  object-fit: cover;
+  border-color: transparent;
+  background-color: rgba(122, 242, 235, 1);
+}
+
+.frame6-rectangle66 {
+  width: 188px;
+  height: 13px;
+  margin: 0 0 41px 0;
+  position: relative;
+  box-sizing: border-box;
+  object-fit: cover;
+  border-color: transparent;
+  background-color: rgba(122, 242, 235, 1);
+}
+
+.frame6-rectangle65 {
+  width: 188px;
+  height: 13px;
+  margin: 0 0 41px 0;
+  position: relative;
+  box-sizing: border-box;
+  object-fit: cover;
+  border-color: transparent;
+  background-color: rgba(122, 242, 235, 1);
+}
+
+.frame6-rectangle64 {
+  width: 188px;
+  height: 13px;
+  margin: 0 0 41px 0;
+  position: relative;
+  box-sizing: border-box;
+  object-fit: cover;
+  border-color: transparent;
+  background-color: rgba(122, 242, 235, 1);
+}
+
+.frame6-rectangle63 {
+  width: 188px;
+  height: 13px;
+  margin: 0 0 41px 0;
+  position: relative;
+  box-sizing: border-box;
+  object-fit: cover;
+  border-color: transparent;
+  background-color: rgba(122, 242, 235, 1);
+}
+
+.frame6-rectangle62 {
+  width: 188px;
+  height: 13px;
+  margin: 0 0 41px 0;
+  position: relative;
+  box-sizing: border-box;
+  object-fit: cover;
+  border-color: transparent;
+  background-color: rgba(122, 242, 235, 1);
+}
+
+.frame6-rectangle61 {
+  width: 188px;
+  height: 13px;
+  position: relative;
+  box-sizing: border-box;
+  object-fit: cover;
+  border-color: transparent;
+  background-color: rgba(122, 242, 235, 1);
+}
+
+.frame6-text09 {
+  top: 11px;
+  left: 97px;
+  color: rgba(255, 255, 255, 1);
+  width: 173px;
+  height: auto;
+  position: absolute;
+  font-size: 14px;
+  align-self: auto;
+  font-style: normal;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 400px;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}

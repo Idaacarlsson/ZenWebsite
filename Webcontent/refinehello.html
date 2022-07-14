@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel="stylesheet" type="text/css" href="refinehello.css">
+  <meta charset="ISO-8859-1">
+  <title>Annotation Tool</title>
+
+</head>
+
+<body>
+
+  <div class="container">
+
+    <div class="top">
+      <input type="button" value="Settings" id="createBtnSettings" onclick="showSettings()">
+      <br>
+      <input type="button" value="Keybindnings" id="createBtnKeybindnings" onclick="showKeybindings()">
+    </div>
+    <div class="left">
+      <section id="settings" class="leftFrame teleport-show" style="display: none;">
+        <span class="titleText">SETTINGS</span>
+        <br>
+        <br>
+        <label class="containerLabel">Area scaling
+          <input type="checkbox">
+          <span class="checkmark"></span>
+        </label>
+        <label class="containerLabel"> Automatic next enabled
+          <input type="checkbox">
+          <span class="checkmark"></span>
+        </label>
+        <label class="containerLabel"> Refine is_electronic enabled
+          <input type="checkbox">
+          <span class="checkmark"></span>
+        </label>
+        <label class="containerLabel"> Refine class enabled
+          <input type="checkbox">
+          <span class="checkmark"></span>
+        </label>
+        <br>
+        <form>
+          <input type="text" id="class-filter" name="class-filter" placeholder="Input class filter">
+        </form>
+        <br>
+        <form>
+          <input type="text" id="country-filter" name="country-filter" placeholder="Input country filter">
+        </form>
+        <br>
+        <form>
+          <input type="text" id="incoming-existing" name="incoming-existing" placeholder="incoming/existing toggle">
+        </form>
+        <br>
+        <select name="signtype" id="signtypefilter">
+          <option value="none" selected disabled hidden>-- Select a mode --</option>
+          <option value="">2</option>
+        </select>
+        <br>
+        <br>
+        <input type="button" value="Apply Filter" id="btnApplyFilter">
+        <img src="https://i.postimg.cc/pdJdRdBN/zenseact.png" class="zenseactlogo" /></br>
+        <span></span>
+        </span>
+      </section>
+    </div>
+
+    <div class="middle">
+      <div class="main-content-container">
+        <div class="containerMiddle">
+          <a href="#"><img src="img/item-01.png" alt=""></a>
+        </div>""
+        <div class="containerMiddle">
+          <a href="#"><img src="img/item-01.png" alt=""></a>
+        </div>
+        <div class="containerMiddle">
+          <a href="#"><img src="img/item-01.png" alt=""></a>
+
+        </div>
+      </div>
+    </div>
+
+
+    <div class="right"></div>
+  </div>
+  <script>
+    function showSettings() {
+
+      var x = document.getElementById('settings');
+      if (x.style.display !== 'block') {
+        x.style.display = 'block';
+      }
+      else {
+        x.style.display = 'none';
+      }
+    }
+  </script>
+</body>
+
+</html>

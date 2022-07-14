@@ -10,21 +10,11 @@
 </head>
 
 <body>
-
-      
-    <div class="TrafficSignTxt">
-        
-        <h1 style="font-size:5vw;">Traffic Sign =</h1>
-        <img src="figures/trafficsign.jpg"  alt="trafficsign" style="width: 120px;height:120px;" class="responsive">
-    </div>
-    
-    <section id="body">
     
    
 
 
-    <section id="body">
-     
+    <section id="teleport-show">
         <link href="./frame5.css" rel="stylesheet"/>
             <div>
               <div id="keyshortcuts" class="frame5-frame5 teleport-show" style="display: none;">
@@ -64,52 +54,95 @@
             </div>
          
     </section>
-    
 
-    <section id="body">    
-    <div class="grid">
-        <div> <img src="figures/trafficsign.jpg"  alt="trafficsign" style="width: 60px;height:60px;" class="responsive"></div>
-        <div><img src="figures/trafficsign.jpg"  alt="trafficsign" style="width: 60px;height:60px;" class="responsive"></div>
-        <div><img src="figures/trafficsign.jpg"  alt="trafficsign" style="width: 60px;height:60px;" class="responsive"></div>
-        <div><img src="figures/trafficsign.jpg"  alt="trafficsign" style="width: 60px;height:60px;" class="responsive"></div>
-        <div><img src="figures/trafficsign.jpg"  alt="trafficsign" style="width: 60px;height:60px;" class="responsive"></div>
-        <div><img src="figures/trafficsign.jpg"  alt="trafficsign" style="width: 60px;height:60px;" class="responsive"></div>
-        <div><img src="figures/trafficsign.jpg"  alt="trafficsign" style="width: 60px;height:60px;" class="responsive"></div>
-        <div><img src="figures/trafficsign.jpg"  alt="trafficsign" style="width: 60px;height:60px;" class="responsive"></div>
-        <div><img src="figures/trafficsign.jpg"  alt="trafficsign" style="width: 60px;height:60px;" class="responsive"></div>  
-      </div>
-    
-</div>
+    <section id="teleport-show">
+     
+      <link href="./frame5.css" rel="stylesheet"/>
+          <div>
+            <div id="settings" class="frame5-frame5 teleport-show" style="display: none;">
+              <span class="frame5-text">SETTINGS</span>
+              <label class="container">Area scaling
+                <input type="checkbox">
+                <span class="checkmark"></span>
+              </label>
+              <label class="container"> Automatic next enabled
+                <input type="checkbox">
+                <span class="checkmark"></span>
+              </label>
+              <label class="container"> Refine is_electronic enabled
+                <input type="checkbox">
+                <span class="checkmark"></span>
+              </label>
+              <label class="container"> Refine class enabled
+                <input type="checkbox">
+                <span class="checkmark"></span>
+              </label>
+              <form>
+                <input type="text" id="class-filter" name="class-filter" value="Input class filter">
+              </form>
+              <form>
+                <input type="text" id="country-filter" name="country-filter" value="Input country filter">
+              </form>
+              <form>
+                <input type="text" id="incoming/existing toggle" name="incoming/existing toggle" value="incoming/existing toggle">
+              </form>
+              <select name="signtype" id="class-select">
+                <option value="">--choose scoring method--</option>
+                <option value="">1</option>
+                <option value="Prohibitory_NoStopping">2</option>
+            </select>
+              <img
+                alt="zenseact13916"
+                src="https://i.postimg.cc/pdJdRdBN/zenseact.png"
+                class="frame5-zenseact1"/>
+                <br/>
+                <span></span>
+              </span>
+            </div>
+          </div>  
+  </section>
 
-
-
-</section>
 <section id="body">
-    <div class="child"><input type="button" value="RESET" id="createBtnRESET" onclick="window.location.href='firstpage.html';">
+    <div class="child"><input type="button" value = "Keybindnings" id="createBtnKeybindnings"  onclick="showKeybindings()">   
 </section>
 
 <section id="body">
-    <div class="child"><input type="button" value="SETTINGS" id="createBtnSETTINGS"  onclick="show()">
-        
-</section>
-    
-<section id="body">
-    <div class="child"><input type="button" value="GUIDELINES" id="createBtnGUIDLINES" onclick="window.location.href='https://confluence.zenseact.com/display/DLOS/Annotation+Guidelines+redirection';">
+  <div class="child"><input type="button" value = "Settings" id="createBtnSETTINGS"  onclick ="showSettings()">   
 </section>
 
-<section id="body">
-    <div class="child"><input type="button" value="NEXT" id="createBtnNEXT" onclick="window.location.href='firstpage.html';">
-</section>
 
 <script>
-function show() {
- 
- /* Access the settings frame*/
- document.getElementById('keyshortcuts')
-         .style.display = "block";
+function showKeybindings() {
 
- document.getElementById('createBtnSETTINGS')
-         .style.display = "none";
+  var x = document.getElementById('keyshortcuts');
+  var y = document.getElementById('settings');
+
+  if(x.style.display !== 'block') {
+    x.style.display = 'block';
+  }
+
+  else {
+    x.style.display = 'none';
+  }
+
+  y.style.display = 'none';
+}
+
+function showSettings() {
+
+  var x = document.getElementById('settings');
+  var y = document.getElementById('keyshortcuts');
+
+  if(x.style.display !== 'block') {
+    x.style.display = 'block';
+  }
+
+  else {
+    x.style.display = 'none';
+  }
+  
+  y.style.display = 'none';
+
 }
 
 </script>
