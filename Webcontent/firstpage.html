@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-    <link rel="stylesheet" type="text/css" href="firstpage.css">
+    <link rel="stylesheet" type="text/css" href="refinehello.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <meta charset="ISO-8859-1">
 
@@ -9,61 +10,72 @@
 </head>
 
 <body>
-    <aside>
-        <div class="parent">
-            <table id="asideTable">
-                <tbody>
-                    <tr>
-                        <tr</tr>
-
-                        <td><span id="city"></span></td>
-                        <td><span id="ipNbr"></span></td>
-                    </tr>
-                    <tr>
-                        <td><span id="degree"></span></td>
-                        <td><span id="weather"></span></td>
-                        <td><span></span></td>
-                        <td><span></span></td>
-                </tbody>
-            </table>
-    </aside>
 
     <div class="parent">
-
         <img class="child" src="https://i.postimg.cc/pdJdRdBN/zenseact.png">
     </div>
 
     <div class="child">
-
-        <select name="signtype" id="class-select">
-            <option value="">--Please choose a mode--</option>
-            <option value="">1</option>
-            <option value="Prohibitory_NoStopping">2</option>
-        </select>
+        <div>
+            <input type="text" id="username" name="firstname" placeholder="Enter username: s000xxxx">
+        </div>
     </div>
+
+
 
     <div class="child">
-
-        <select name="signtype" id="class-select">
-            <option value="">--Please choose an option--</option>
-            <option value="Prohibitory_NoUTurn">NoUturn</option>
-            <option value="Prohibitory_NoStopping">NoStopping</option>
-            <option value="Prohibitory_HeightLimit">HeightLimit</option>
-            <option value="Prohibitory_NoOvertaking">NoOvertaking</option>
-            <option value="Mandatory_TurnLeft">TurnLeft</option>
-            <option value="Mandatory_Roundabout">Roundabout</option>
-        </select>
+        <div class="dropdown">
+            <select id="mode-select" class="dropbtn">
+                <option value="none" id="0" selected disabled hidden>-- Select a mode --</option>
+                <option value="1" id="1">1: Refinement</option>
+                <option value="2" id="2">2: Grid-View</option>
+            </select>
+        </div>
     </div>
+    <br>
+    <br>
 
-    <section id="body">
-
-        <div class="parent"><input type="button" value="START" id="createBtn" onclick="window.location.href='secondpage.html';">
+    <section>
+        <form>
+            <div class="parent"><input type="button" value="START" id="createBtn" onclick=onClick();>
+        </form>
     </section>
 
-    <section id="body">
-        <input type="button" value="Leadership board" id="leaderButton" onclick="window.location.href='leaderboard.html';">
+    <section>
+        <input type="button" value="Leaderboard" id="leaderButton" onclick="window.location.href='leaderboard.html';">
     </section>
+
+    <script>
+
+        var modeSelect = document.getElementById("mode-select");
+        modeSelect.addEventListener('change', function () {
+            var modeButton = document.getElementById("mode-button");
+            modeButton.innerText = modeSelect.value;
+        });
+
+        function onClick() {
+            var select = document.getElementById('mode-select');
+            var value = select.options[select.selectedIndex].value;
+            
+            if(value=="1") {
+                window.location.assign("refinementToolcopy.html")
+            }
+            if(value=="2") {
+                window.location.assign("gridview.html")
+            }
+        }
+
+
+
+
+
+    </script>
+
+
+
+
 
 
 </body>
-</html>
+
+</html
