@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="container.css">
+  
+    <meta charset="ISO-8859-1">
+
+    <title>Annotation Tool</title>
+</head>
+
+<body>
+
+    <section id="teleport-show">
+        <link href="./frame5.css" rel="stylesheet"/>
+            <div>
+              
+              <div id="manualAnnotation" class="ManualAnnoation-MA teleport-show" style="display: none;">
+                <span id="hej">Manual Annotation</span>
+    
+                <form>
+                    <input type="text" id="searchbar" name="class-filter" placeholder="Search">
+                </form> 
+                <br>
+                <fieldset id="corner">
+                    <legend>Is electronic? </legend>
+                    <label class="container"> 
+                      <input type="checkbox"> True
+                      <span class="checkmark"></span>
+                    </label>
+                    <label class="container"> 
+                      <input type="checkbox"> False
+                      <span class="checkmark"></span>
+                    </label>
+                </fieldset>
+  <br> 
+
+                <input type="button" value ="Apply Annotation" id="btnApplyAnnotation">
+           
+            </div>   
+    </section>
+
+    <section id="body">
+        <div class="child"><input type="button" value ="Manual annotation" id="createBtnManualAnnoation"  onclick ="showManualAnnotation()">   
+      </section>
+
+
+<script>
+    function showManualAnnotation() {
+    
+      var x = document.getElementById('manualAnnotation');
+      if(x.style.display !== 'block') {
+        x.style.display = 'block';
+      }
+    
+      else {
+        x.style.display = 'none';
+      }
+    
+      y.style.display = 'none';
+    }
+    
+
+    </script>
+
+</body>
+</html>
