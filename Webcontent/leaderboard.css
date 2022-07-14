@@ -31,7 +31,7 @@ img {
 }
 
 .lboard_section{
-	width: 900px;
+	width: 1300px;
 	height: 600px;
 	margin: 100px auto 0;
 	background: #0af2e9;
@@ -58,20 +58,16 @@ img {
 }
 
 #home {
-    background-color: #4dd6cb;
-    color: white;
-    ActiveBorder: aquamarine;
-    padding: 10px 50px;
-    font: bold;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    border-radius: 3px;
-    font-weight: lighter;
-    display: inline-block;
-	margin-top: 1px;
-	margin-right: 2px;
-	position:absolute;
-	top:0;
-	left:0;
+	background-color: #4DD6CB;
+	color: white;
+	padding: 10px 50px;
+	font-size: 16px;
+	border-radius: 4px;
+	border: none;
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+	position: absolute;
+	top: 5px;
+	left: 0;
 
 }
 
