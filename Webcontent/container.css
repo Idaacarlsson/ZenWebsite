@@ -1,0 +1,601 @@
+@charset "ISO-8859-1";
+
+@media screen and (max-width:1000px) {
+    .column {
+        width: 100%;
+    }
+}
+
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: black;
+}
+
+#body {
+    margin-top: 2%;
+}
+
+#createBtnManualAnnoation {
+    background-color: #ED226E;
+     color: white;
+     border-color: #F5F5F5(149, 149, 149);
+     padding: 10px 50px;
+     font-family: Verdana, Geneva, Tahoma, sans-serif;
+     border-radius: 3px;
+     margin-top: 0.8%;
+     margin-left: 1.1%;
+     position:absolute;
+     top:0;
+     left:0;
+ 
+ }
+
+ input[type=text], select {
+    width: 95%;
+    padding: 8px 20px;
+    margin: 0 auto;
+    display: flex;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#corner {
+    color:#F5F5F5;
+}
+
+#Electronic {
+    color:#F5F5F5;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+}
+
+
+
+#corner1 {
+    color:#F5F5F5;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+}
+
+
+ #btnApplyAnnotation {
+    background-color: #4dd6cb;
+    color: white;
+    border-color: #F5F5F5(149, 149, 149);
+    padding: 8px 30px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: 0 auto;
+    display: flex;
+    
+    
+ }
+
+ #hej {
+    color:#F5F5F5;
+    padding: 8px 30px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: 0 auto;
+    display: flex;
+ }
+
+
+ /* The container */
+.container {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 15px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  
+  /* Hide the browser's default checkbox */
+  .container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+  
+  /* Create a custom checkbox */
+  .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #eee;
+  }
+  
+  /* On mouse-over, add a grey background color */
+  .container:hover input ~ .checkmark {
+    background-color: #ccc;
+  }
+  
+  /* When the checkbox is checked, add a blue background */
+  .container input:checked ~ .checkmark {
+    background-color:#4dd6cb;
+  }
+  
+  /* Create the checkmark/indicator (hidden when not checked) */
+  .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+  
+  /* Show the checkmark when checked */
+  .container input:checked ~ .checkmark:after {
+    display: block;
+  }
+  
+  /* Style the checkmark/indicator */
+  .container .checkmark:after {
+    left: 9px;
+    top: 5px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+
+/*FRFE */
+.ManualAnnoation-MA {
+    margin-top: -3%;
+    float: left;  
+    width: 300px;
+    height: 275px;
+    display: flex;
+    overflow: hidden;
+    position: relative;
+    max-width: 342px;
+    box-sizing: border-box;
+    transition: 0.3s;
+    align-items: flex-start;
+    background: #ED226E;
+    border-radius: 5;
+  }
+  .ManualAnnoation-MA:focus-visible {
+    z-index: 100;
+    box-shadow: 5px 5px 10px 0px #d4d4d4;
+    border-color: var(--dl-color-gray-black);
+    border-width: 1px;
+    border-radius: var(--dl-radius-radius-radius4);
+  }
+
+  input[type="range"] {
+    width: 30px;
+  }
+  
+  input[type="text"]:invalid {
+    outline: 2px solid red;
+  }
+  
+  div {
+    margin: 2rem;
+  }
+  
+  .screen-reader-only {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+  }
+
+
+  
+  .frame5-text {
+    color:#F5F5F5;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 20px;
+    margin: 0 auto;
+    display: flex;
+  }
+  .frame5-zenseact1 {
+    top: 428px;
+    left: 11px;
+    width: 321px;
+    height: 365px;
+    position: absolute;
+    box-sizing: border-box;
+    object-fit: cover;
+    border-color: transparent;
+  }
+  .frame5-text01 {
+    top: 64px;
+    left: 44px;
+    color: rgba(0, 0, 0, 1);
+    height: auto;
+    position: absolute;
+    font-size: 14px;
+    align-self: auto;
+    font-style: normal;
+    text-align: left;
+    font-family: Inter;
+    font-weight: 700px;
+    line-height: normal;
+    font-stretch: normal;
+    text-decoration: none;
+  }
+  .frame5-text02 {
+    top: 251px;
+    left: 44px;
+    color: rgba(0, 0, 0, 1);
+    width: 93px;
+    height: auto;
+    position: absolute;
+    font-size: 14px;
+    align-self: auto;
+    font-style: normal;
+    text-align: left;
+    font-family: Inter;
+    font-weight: 700px;
+    line-height: normal;
+    font-stretch: normal;
+    text-decoration: none;
+  }
+  .frame5-text03 {
+    top: 314px;
+    left: 44px;
+    color: rgba(0, 0, 0, 1);
+    height: auto;
+    position: absolute;
+    font-size: 14px;
+    align-self: auto;
+    font-style: normal;
+    text-align: left;
+    font-family: Inter;
+    font-weight: 700px;
+    line-height: normal;
+    font-stretch: normal;
+    text-decoration: none;
+  }
+  .frame5-text04 {
+    top: 358px;
+    left: 44px;
+    color: rgba(0, 0, 0, 1);
+    height: auto;
+    position: absolute;
+    font-size: 14px;
+    align-self: auto;
+    font-style: normal;
+    text-align: left;
+    font-family: Inter;
+    font-weight: 700px;
+    line-height: normal;
+    font-stretch: normal;
+    text-decoration: none;
+  }
+  .frame5-text05 {
+    top: 387px;
+    left: 44px;
+    color: rgba(0, 0, 0, 1);
+    height: auto;
+    position: absolute;
+    font-size: 14px;
+    align-self: auto;
+    font-style: normal;
+    text-align: left;
+    font-family: Inter;
+    font-weight: 700px;
+    line-height: normal;
+    font-stretch: normal;
+    text-decoration: none;
+  }
+  .frame5-text06 {
+    top: 285px;
+    left: 43px;
+    color: rgba(0, 0, 0, 1);
+    height: auto;
+    position: absolute;
+    font-size: 14px;
+    align-self: auto;
+    font-style: normal;
+    text-align: left;
+    font-family: Inter;
+    font-weight: 700px;
+    line-height: normal;
+    font-stretch: normal;
+    text-decoration: none;
+  }
+  .frame5-text07 {
+    top: 94px;
+    left: 44px;
+    color: rgba(0, 0, 0, 1);
+    height: auto;
+    position: absolute;
+    font-size: 14px;
+    align-self: auto;
+    font-style: normal;
+    text-align: left;
+    font-family: Inter;
+    font-weight: 700px;
+    line-height: normal;
+    font-stretch: normal;
+    text-decoration: none;
+  }
+  .frame5-text08 {
+    top: 123px;
+    left: 44px;
+    color: rgba(0, 0, 0, 1);
+    height: auto;
+    position: absolute;
+    font-size: 14px;
+    align-self: auto;
+    font-style: normal;
+    text-align: left;
+    font-family: Inter;
+    font-weight: 700px;
+    line-height: normal;
+    font-stretch: normal;
+    text-decoration: none;
+  }
+  .frame5-text09 {
+    top: 155px;
+    left: 44px;
+    color: rgba(0, 0, 0, 1);
+    height: auto;
+    position: absolute;
+    font-size: 14px;
+    align-self: auto;
+    font-style: normal;
+    text-align: left;
+    font-family: Inter;
+    font-weight: 700px;
+    line-height: normal;
+    font-stretch: normal;
+    text-decoration: none;
+  }
+  .frame5-text10 {
+    top: 187px;
+    left: 44px;
+    color: rgba(0, 0, 0, 1);
+    height: auto;
+    position: absolute;
+    font-size: 14px;
+    align-self: auto;
+    font-style: normal;
+    text-align: left;
+    font-family: Inter;
+    font-weight: 700px;
+    line-height: normal;
+    font-stretch: normal;
+    text-decoration: none;
+  }
+  .frame5-text11 {
+    top: 217px;
+    left: 45px;
+    color: rgba(0, 0, 0, 1);
+    height: auto;
+    position: absolute;
+    font-size: 14px;
+    align-self: auto;
+    font-style: normal;
+    text-align: left;
+    font-family: Inter;
+    font-weight: 700px;
+    line-height: normal;
+    font-stretch: normal;
+    text-decoration: none;
+  }
+  .frame5-text12 {
+    top: 64px;
+    left: 143px;
+    color: rgba(0, 0, 0, 1);
+    height: auto;
+    position: absolute;
+    font-size: 14px;
+    align-self: auto;
+    font-style: normal;
+    text-align: left;
+    font-family: Inter;
+    font-weight: 700px;
+    line-height: normal;
+    font-stretch: normal;
+    text-decoration: none;
+  }
+  .frame5-text13 {
+    top: 96px;
+    left: 143px;
+    color: rgba(0, 0, 0, 1);
+    height: auto;
+    position: absolute;
+    font-size: 14px;
+    align-self: auto;
+    font-style: normal;
+    text-align: left;
+    font-family: Inter;
+    font-weight: 700px;
+    line-height: normal;
+    font-stretch: normal;
+    text-decoration: none;
+  }
+  .frame5-text14 {
+    top: 123px;
+    left: 143px;
+    color: rgba(0, 0, 0, 1);
+    height: auto;
+    position: absolute;
+    font-size: 14px;
+    align-self: auto;
+    font-style: normal;
+    text-align: left;
+    font-family: Inter;
+    font-weight: 700px;
+    line-height: normal;
+    font-stretch: normal;
+    text-decoration: none;
+  }
+  .frame5-text15 {
+    top: 155px;
+    left: 143px;
+    color: rgba(0, 0, 0, 1);
+    height: auto;
+    position: absolute;
+    font-size: 14px;
+    align-self: auto;
+    font-style: normal;
+    text-align: left;
+    font-family: Inter;
+    font-weight: 700px;
+    line-height: normal;
+    font-stretch: normal;
+    text-decoration: none;
+  }
+  .frame5-text16 {
+    top: 180px;
+    left: 144px;
+    color: rgba(0, 0, 0, 1);
+    height: auto;
+    position: absolute;
+    font-size: 14px;
+    align-self: auto;
+    font-style: normal;
+    text-align: left;
+    font-family: Inter;
+    font-weight: 700px;
+    line-height: normal;
+    font-stretch: normal;
+    text-decoration: none;
+  }
+  .frame5-text17 {
+    top: 214px;
+    left: 143px;
+    color: rgba(0, 0, 0, 1);
+    height: auto;
+    position: absolute;
+    font-size: 14px;
+    align-self: auto;
+    font-style: normal;
+    text-align: left;
+    font-family: Inter;
+    font-weight: 700px;
+    line-height: normal;
+    font-stretch: normal;
+    text-decoration: none;
+  }
+  .frame5-text18 {
+    top: 250px;
+    left: 143px;
+    color: rgba(0, 0, 0, 1);
+    height: auto;
+    position: absolute;
+    font-size: 14px;
+    align-self: auto;
+    font-style: normal;
+    text-align: left;
+    font-family: Inter;
+    font-weight: 700px;
+    line-height: normal;
+    font-stretch: normal;
+    text-decoration: none;
+  }
+  .frame5-text19 {
+    top: 281px;
+    left: 144px;
+    color: rgba(0, 0, 0, 1);
+    height: auto;
+    position: absolute;
+    font-size: 14px;
+    align-self: auto;
+    font-style: normal;
+    text-align: left;
+    font-family: Inter;
+    font-weight: 700px;
+    line-height: normal;
+    font-stretch: normal;
+    text-decoration: none;
+  }
+  .frame5-text20 {
+    top: 314px;
+    left: 144px;
+    color: rgba(0, 0, 0, 1);
+    height: auto;
+    position: absolute;
+    font-size: 14px;
+    align-self: auto;
+    font-style: normal;
+    text-align: left;
+    font-family: Inter;
+    font-weight: 700px;
+    line-height: normal;
+    font-stretch: normal;
+    text-decoration: none;
+  }
+  .frame5-text21 {
+    top: 358px;
+    left: 143px;
+    color: rgba(0, 0, 0, 1);
+    height: auto;
+    position: absolute;
+    font-size: 14px;
+    align-self: auto;
+    font-style: normal;
+    text-align: left;
+    font-family: Inter;
+    font-weight: 700px;
+    line-height: normal;
+    font-stretch: normal;
+    text-decoration: none;
+  }
+  .frame5-text22 {
+    top: 389px;
+    left: 144px;
+    color: rgba(0, 0, 0, 1);
+    height: auto;
+    position: absolute;
+    font-size: 14px;
+    align-self: auto;
+    font-style: normal;
+    text-align: left;
+    font-family: Inter;
+    font-weight: 700px;
+    line-height: normal;
+    font-stretch: normal;
+    text-decoration: none;
+  }
+  
+  @media(max-width: 479px) {
+    .frame5-frame5 {
+      height:0;
+      overflow:hidden;
+      z-index: 100;
+      box-shadow: 5px 5px 10px 0px #D4D4D4;
+      border-color: var(--dl-color-gray-black);
+      border-width: 1px;
+      border-radius: var(--dl-radius-radius-radius4);
+      display: none;
+		
+    }
+    .frame5-zenseact1 {
+      left: 27px;
+      width: 275px;
+      bottom: 29px;
+      height: 286px;
+    }
+    .frame5-text05 {
+      top: 395px;
+      left: 56px;
+    }
+
+
+  }
+
+  .teleport-show {
+    top: 100px;
+    left: 0px;
+  }
+  
